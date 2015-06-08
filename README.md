@@ -25,7 +25,7 @@ An incredibly newbie-friendly introduction to the world of git and Github. Writt
 Part two of the above article, this post takes you through setting up a git repo and performing common commands in your repo. Open up your terminal and follow along to get the most out of this post.
 
 - [Try Git](https://try.github.io/levels/1/challenges/1)
-This course from Code School lets you try  git from the browser. It's an easy way to practice the commands you'll use for the Ruby Monday project.
+This course from Code School lets you try  git from the browser. It's an easy way to practice the commands you'll use for the JavaScript Tuesday project.
 
 - [Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
 We'll be using the Feature Branch Workflow for these projects. This is a great blog post filled with awesome diagrams that show you how it works. Once you've familiarized yourself with git and Github, read through this to see how we'll use it in this collaborative setting.
