@@ -68,4 +68,4 @@ For more details, see our full [Code of Conduct](http://www.codenewbie.org/blogs
 [1]: https://codenewbie.typeform.com/to/uwsWlZ
 
 
-### Optional
+### [Optional] Setting up Yeoman
