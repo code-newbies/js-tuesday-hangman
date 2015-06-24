@@ -66,3 +66,6 @@ The purpose of this project is to learn by working on a real-world application. 
 For more details, see our full [Code of Conduct](http://www.codenewbie.org/blogs/our-code-of-conduct). We're excited to learn with you :)
 
 [1]: https://codenewbie.typeform.com/to/uwsWlZ
+
+
+### Optional
