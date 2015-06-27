@@ -122,6 +122,7 @@ body {
 
 #alphabet-keypad { 
   float: left;
+  max-width: 100%;
   padding: auto;  
 }
 
