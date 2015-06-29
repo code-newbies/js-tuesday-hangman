@@ -21,7 +21,7 @@ function player() {
     return this.score;
   };
   
-   //double score if instant finish guess is right
+   //double score if instant finish guess is right- function build in progress
    this.doubleScore = function(wordGuessed,word) {
     var wordCaps = word.toUpperCase();
     this.score = wordCaps.length;
@@ -29,7 +29,7 @@ function player() {
     return this.score;
   };
   
-	//sudden death if instant finish guess is wrong
+	//sudden death if instant finish guess is wrong - function build in progress
     this.suddenDeath = function(wordGuessed,word) {
       this.score = 0;
       this.isAlive = false;
