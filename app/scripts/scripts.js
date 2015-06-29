@@ -1,17 +1,31 @@
-/* For picking letters from alphabet keypad. Returns the
-   letter chosen or "already picked"
-*/
-function pickLetter(letter) {
+(function () {
   "use strict";
-  var result;
-
-  if (letter.className === "letter-button") {
-    result = letter.innerHTML;
-    letter.className = "letter-disabled";
-  } else {
-    result = "already picked";
+  
+  // add pickLetter to all buttons on alphabet keypad
+  $(".letter-button").on("click", pickLetter);
+  
+  // pick a letter from alphabet keypad
+  function pickLetter() {
+    var button = $(this),
+        letterChosen;
+        
+    if (button.attr("class") === "letter-button") {
+      letterChosen = button.html();
+      disableButton(button);
+      
+    } else {
+      letterChosen = "already picked";
+    }
+	
+    verify(letterChosen);
+	}
+  
+  function disableButton(button) {
+    button.removeClass("letter-button").addClass("letter-disabled");
   }
+}());
 
-  console.log(result);    // for testing, remove later
-  return result;
+// currently a placeholder for verifying the letter
+function verify(letter) {
+  console.log(letter);
 }
