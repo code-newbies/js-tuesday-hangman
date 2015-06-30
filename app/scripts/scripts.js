@@ -95,10 +95,10 @@ $('#instantFinish').click(function(){
   $("#submit").show();
 
   var word = wordSelect(hardArray);
-  console.log(word);
+  console.log(word); //test purposes, remove later
 
   $("#submit").click(function(){
-    console.log("success");
+    console.log("success"); //test purposes, remove later
     var wordGuessed = $("#wordinput").val();
     
 
@@ -108,7 +108,7 @@ $('#instantFinish').click(function(){
       player.suddenDeath(wordGuessed,word);
     }
 
-    alert(player.score);
+    alert(player.score); //test purposes, remove later
   }); 
 
 });
