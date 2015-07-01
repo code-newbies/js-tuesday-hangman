@@ -27,6 +27,3 @@ var word = array[num];
 return word;
 }
 
-function wordLetters (){
-  
-}
