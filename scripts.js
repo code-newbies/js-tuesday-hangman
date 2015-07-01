@@ -30,7 +30,3 @@ return word;
 function wordLetters (){
   
 }
-
-console.log(easyArray);
-console.log(wordSelect(hardArray));
-
