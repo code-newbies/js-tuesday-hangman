@@ -29,11 +29,13 @@
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-        <h3 class="text-muted">hangman</h3>
+        <h1 class="text-muted">Hangman</h1>
       </div>
 
-      <div class="jumbotron">
+      <div class="col-lg-12">
         <h1>Hangman</h1>
+           <div class="row">
+        <div class="col-sm-4">
           <div id="alphabet-keypad">
         <div class="letter-button" onclick="pickLetter(this)">A</div>
         <div class="letter-button" onclick="pickLetter(this)">B</div>
@@ -62,9 +64,19 @@
         <div class="letter-button" onclick="pickLetter(this)">Y</div>
         <div class="letter-button" onclick="pickLetter(this)">Z</div>
        </div>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-ok"></span></a></p>
+        </div>
+        <div class="col-sm-4">
+          <div id="hangman-box">
+            <p>Spot for hangman!</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div id="graveyard">
+            <p>spot for letter graveyard</p>
+          </div>
+        </div>
       </div>
-
+      </div>
       <div class="row marketing">
         <div class="col-lg-6">
           <h3>Whats Included</h3>
@@ -86,10 +98,10 @@
 
           <br>
 
-          <h2><em><b>Files that you should modify are inside the 'app' folder.</b></em></h2>
+          <h4><em><b>Files that you should modify are inside the 'app' folder.</b></em></h4>
 
           <br>
-          
+
           <iframe width="560" height="315" src="https://www.youtube.com/embed/gKiaLSJW5xI" frameborder="0" allowfullscreen></iframe>
 
           </video>
@@ -110,16 +122,6 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
 
         <!-- build:js(.) scripts/plugins.js -->
         <script src="bower_components/bootstrap/js/affix.js"></script>
