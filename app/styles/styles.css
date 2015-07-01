@@ -126,12 +126,12 @@ body {
   padding: auto;  
 }
 
-.hangman-box {
+#hangman-box {
   background-color: lightcoral;
   max-width: 100%;
 }
 
-.graveyard {
+#graveyard {
   background-color: lightblue; 
   max-width: 100%;
 }
