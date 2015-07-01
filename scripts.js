@@ -1,5 +1,3 @@
-(function () {
-  console.log('hey');
 
   var hangmanWords = [
  "the","of","and","a","to","in","is","you","that","it","he",
@@ -35,4 +33,4 @@ function wordLetters (){
 
 console.log(easyArray);
 console.log(wordSelect(hardArray));
-})();
+
