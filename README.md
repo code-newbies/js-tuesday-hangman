@@ -47,8 +47,8 @@ We use pull requests so you can get your code reviewed by others before merging 
 
 1. Join our [Slack community][1] and tell your host (dsberger on Slack, Twitter and Github) that you want to join the project repo.
 2. The host will invite you to join as a collaborator. You **MUST** be a collaborator to join the project and pick up features.
-3. Accept invite from Github to join as a collaborator.
-- Look through the issues list and pick a feature you want to work on.
+3. Accept invite from Github and Trello to join as a collaborator.
+4. Look at [our Trello board](https://trello.com/b/ffCjlMki/js-tuesday) to find an issue in "Up Next" that doesn't have anyone working on it.
 - Assign that feature to yourself.
 - Clone this repo.
 - Make a feature branch for the issue you're working on. The first part of the branch name should be your initials, like this: `sy-allows-users-to-update-avatar`.
