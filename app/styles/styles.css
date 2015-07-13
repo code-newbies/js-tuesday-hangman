@@ -83,8 +83,9 @@ body {
   }
 
   /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+  .col-lg-12 {
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 2%;
   }
 }
 
@@ -96,7 +97,6 @@ body {
   padding: 0.3em 0.65em;
   border-radius: 50%;
   display: inline;
-
   font-family: monospace;
   font-size: 2em;
   transition: color 0.2s,
@@ -121,5 +121,26 @@ body {
 }
 
 #alphabet-keypad {
-  width: 30%;
+  float: left;
+  max-width: 100%;
+  padding: auto;
+}
+
+#hangman-box {
+  background-color: #E6E6E6;
+  max-width: 100%;
+}
+
+#graveyard {
+  background-color: lightblue;
+  max-width: 100%;
+}
+
+.letter-space {
+  text-align: center;
+  letter-spacing: 0.5em;
+  background-color: #CFCFCF;
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
 }

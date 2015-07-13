@@ -8,8 +8,8 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- replaced bower:css with minified bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -17,127 +17,91 @@
     <!-- endbuild -->
   </head>
   <body>
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+      <!--[if lt IE 10]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
 
 
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">hangman</h3>
-      </div>
+      <div class="container">
+          <div class="header">
+            <ul class="nav nav-pills pull-right">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <h1 class="text-muted">Hangman</h1>
+          </div>
 
-      <div class="jumbotron">
-        <h1>Hangman</h1>
-          <div id="alphabet-keypad">
-        <div class="letter-button" onclick="pickLetter(this)">A</div>
-        <div class="letter-button" onclick="pickLetter(this)">B</div>
-        <div class="letter-button" onclick="pickLetter(this)">C</div>
-        <div class="letter-button" onclick="pickLetter(this)">D</div>
-        <div class="letter-button" onclick="pickLetter(this)">E</div>
-        <div class="letter-button" onclick="pickLetter(this)">F</div>
-        <div class="letter-button" onclick="pickLetter(this)">G</div>
-        <div class="letter-button" onclick="pickLetter(this)">H</div>
-        <div class="letter-button" onclick="pickLetter(this)">I</div>
-        <div class="letter-button" onclick="pickLetter(this)">J</div>
-        <div class="letter-button" onclick="pickLetter(this)">K</div>
-        <div class="letter-button" onclick="pickLetter(this)">L</div>
-        <div class="letter-button" onclick="pickLetter(this)">M</div>
-        <div class="letter-button" onclick="pickLetter(this)">N</div>
-        <div class="letter-button" onclick="pickLetter(this)">O</div>
-        <div class="letter-button" onclick="pickLetter(this)">P</div>
-        <div class="letter-button" onclick="pickLetter(this)">Q</div>
-        <div class="letter-button" onclick="pickLetter(this)">R</div>
-        <div class="letter-button" onclick="pickLetter(this)">S</div>
-        <div class="letter-button" onclick="pickLetter(this)">T</div>
-        <div class="letter-button" onclick="pickLetter(this)">U</div>
-        <div class="letter-button" onclick="pickLetter(this)">V</div>
-        <div class="letter-button" onclick="pickLetter(this)">W</div>
-        <div class="letter-button" onclick="pickLetter(this)">X</div>
-        <div class="letter-button" onclick="pickLetter(this)">Y</div>
-        <div class="letter-button" onclick="pickLetter(this)">Z</div>
-       </div>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-ok"></span></a></p>
-      </div>
+          <div class="col-lg-12">
+            <h1>Hangman</h1>
+               <div class="row">
+                  <div class="col-md-4">
+                      <div id="alphabet-keypad">
+                        <div class="letter-button" onclick="pickLetter(this)">A</div>
+                        <div class="letter-button" onclick="pickLetter(this)">B</div>
+                        <div class="letter-button" onclick="pickLetter(this)">C</div>
+                        <div class="letter-button" onclick="pickLetter(this)">D</div>
+                        <div class="letter-button" onclick="pickLetter(this)">E</div>
+                        <div class="letter-button" onclick="pickLetter(this)">F</div>
+                        <div class="letter-button" onclick="pickLetter(this)">G</div>
+                        <div class="letter-button" onclick="pickLetter(this)">H</div>
+                        <div class="letter-button" onclick="pickLetter(this)">I</div>
+                        <div class="letter-button" onclick="pickLetter(this)">J</div>
+                        <div class="letter-button" onclick="pickLetter(this)">K</div>
+                        <div class="letter-button" onclick="pickLetter(this)">L</div>
+                        <div class="letter-button" onclick="pickLetter(this)">M</div>
+                        <div class="letter-button" onclick="pickLetter(this)">N</div>
+                        <div class="letter-button" onclick="pickLetter(this)">O</div>
+                        <div class="letter-button" onclick="pickLetter(this)">P</div>
+                        <div class="letter-button" onclick="pickLetter(this)">Q</div>
+                        <div class="letter-button" onclick="pickLetter(this)">R</div>
+                        <div class="letter-button" onclick="pickLetter(this)">S</div>
+                        <div class="letter-button" onclick="pickLetter(this)">T</div>
+                        <div class="letter-button" onclick="pickLetter(this)">U</div>
+                        <div class="letter-button" onclick="pickLetter(this)">V</div>
+                        <div class="letter-button" onclick="pickLetter(this)">W</div>
+                        <div class="letter-button" onclick="pickLetter(this)">X</div>
+                        <div class="letter-button" onclick="pickLetter(this)">Y</div>
+                        <div class="letter-button" onclick="pickLetter(this)">Z</div>
+                      </div>
+                    </div>
+                    <div class="col-md-4" id="hangman-box">
+                          <p id="puzzle-box"><h2><span class="letter-space"></span></h2></p>
+                          <p><button id="easy-puzzle" class="btn btn-info btn-block" type="button">Easy Puzzle</button><button id="hard-puzzle" class="btn btn-info btn-block" type="button">Hard Puzzle</button></p>
+                    </div>
+                  <div class="col-md-4">
+                    <div id="graveyard">
+                      <p>spot for letter graveyard</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h3>Whats Included</h3>
-          <p>The webpage was scaffold out using Yeoman. A web scaffolding tool for mondern apps</p>
-          <p>This tool includes:</p>
-          <ul>
-            <li>Yo: which scaffolds out the templates with a generator.</li>
-            <li>Bower: which handles Dependencies</li>
-            <li>Grunt/Gulp: which handles the build and test.</li>
-          </ul>
+      <!-- replaced bower jquery library with external library -->
 
-          <br>
+      <!-- endbower -->
+      <!-- endbuild -->
 
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
+          <!-- build:js(.) scripts/plugins.js -->
+          <script src="bower_components/bootstrap/js/affix.js"></script>
+          <script src="bower_components/bootstrap/js/alert.js"></script>
+          <script src="bower_components/bootstrap/js/dropdown.js"></script>
+          <script src="bower_components/bootstrap/js/tooltip.js"></script>
+          <script src="bower_components/bootstrap/js/modal.js"></script>
+          <script src="bower_components/bootstrap/js/transition.js"></script>
+          <script src="bower_components/bootstrap/js/button.js"></script>
+          <script src="bower_components/bootstrap/js/popover.js"></script>
+          <script src="bower_components/bootstrap/js/carousel.js"></script>
+          <script src="bower_components/bootstrap/js/scrollspy.js"></script>
+          <script src="bower_components/bootstrap/js/collapse.js"></script>
+          <script src="bower_components/bootstrap/js/tab.js"></script>
+          <!-- endbuild -->
 
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-
-          <br>
-
-          <h2><em><b>Files that you should modify are inside the 'app' folder.</b></em></h2>
-
-          <br>
-          
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/gKiaLSJW5xI" frameborder="0" allowfullscreen></iframe>
-
-          </video>
-
-
-        </div>
-      </div>
-
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> JavaScript Tuesday Work In Progress</p>
-      </div>
-
-    </div>
-
-
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-
-        <!-- build:js(.) scripts/plugins.js -->
-        <script src="bower_components/bootstrap/js/affix.js"></script>
-        <script src="bower_components/bootstrap/js/alert.js"></script>
-        <script src="bower_components/bootstrap/js/dropdown.js"></script>
-        <script src="bower_components/bootstrap/js/tooltip.js"></script>
-        <script src="bower_components/bootstrap/js/modal.js"></script>
-        <script src="bower_components/bootstrap/js/transition.js"></script>
-        <script src="bower_components/bootstrap/js/button.js"></script>
-        <script src="bower_components/bootstrap/js/popover.js"></script>
-        <script src="bower_components/bootstrap/js/carousel.js"></script>
-        <script src="bower_components/bootstrap/js/scrollspy.js"></script>
-        <script src="bower_components/bootstrap/js/collapse.js"></script>
-        <script src="bower_components/bootstrap/js/tab.js"></script>
-        <!-- endbuild -->
-
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/styles.js"></script>
+          <!-- build:js({app,.tmp}) scripts/main.js -->
+           <script src="scripts/scripts.js"></script>
+             <!-- external minified jquery library -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <!-- endbuild -->
 </body>
 </html>
