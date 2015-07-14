@@ -1,6 +1,6 @@
-// add pickLetter to all buttons on alphabet keypad
-$(".letter-button").on("click", pickLetter);
-  
+// listen for clicks on alphabet keypad letters
+$(document).on("click", ".letter-button", pickLetter);
+
 // pick a letter from alphabet keypad
 function pickLetter() {
     var currentLetter = $(this);
