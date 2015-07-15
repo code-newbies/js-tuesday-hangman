@@ -23,7 +23,7 @@ var hardArray = hangmanWords.filter(function(word){
   return word.length > 4;
 });
 //sets the word to be guessed
-var currentWordFull = easyArray[47],
+var currentWordFull = easyArray[47],//IMPORTANT: replace the number with wordSelect (the function) for production use
 //set an all lower case version of the current word
 currentWord = currentWordFull.toLowerCase();
 
@@ -64,8 +64,6 @@ function pickLetter(letter) {
   }
   // for testing, remove later
   console.log(result);
-  console.log(resultMatches);
-  return result;
 }
 
 //picks out a word in the "hangmanWords" array and returns it
@@ -86,6 +84,7 @@ function handlePickedLetter(result) {
     ind = currentWord.indexOf(result.toLowerCase(), ind + 1);
   }
 
+  console.log(resultMatches);
 
   //if resultMatches is greater than 0 proceed to place them in the dom
   if(resultMatches.length > 0) {
