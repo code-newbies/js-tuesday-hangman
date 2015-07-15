@@ -144,10 +144,25 @@ body {
 .character-block {
   display: inline-block;
   width: 3em;
-  height: 4em;
+  height: 3em;
   margin: .2em;
+  vertical-align: top;
+}
+.character-block span {
+  font-size: 2em;
+  padding: 0.3em 0.4em;
 }
 
 .is-letter {
   box-shadow: 0 .1em 0 0 black;
+}
+
+.grave-letter {
+  display: inline-block;
+  margin: .2em;
+  vertical-align: top;
+  font-size: 2em;
+  padding: 0.3em 0.4em;
+  border: 1px solid rgb(0,0,0);
+  border-radius: 100% 100% 0 0 ;
 }
