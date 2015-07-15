@@ -147,6 +147,7 @@ body {
   height: 3em;
   margin: .2em;
   vertical-align: top;
+  text-align: center;
 }
 .character-block span {
   font-size: 2em;
