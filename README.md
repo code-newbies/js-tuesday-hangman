@@ -1,8 +1,8 @@
-# Welcome to the JavaScript Tuesday Project! 
+# Welcome to the JavaScript Tuesday Project!
 This is the project for the CodeNewbie JavaScript Tuesday group. You can join the group [here](https://codenewbie.typeform.com/to/uwsWlZ). To get started, read the following, and if you get stuck, reach out to [Dan Berger](http://twitter.com/dsberger), the host.
 
 ### About this project
-We are building a hangman game to help us develop our JavaScript skills. We meet weekly [here](https://codenewbie.typeform.com/to/uwsWlZ) in the "js-tuesday" channel on Tuesday at 9PM EST, so mark your calendars and stop by! There, we'll review the project, look at code together, and share what we learned. 
+We are building a hangman game to help us develop our JavaScript skills. We meet weekly [here](https://codenewbie.typeform.com/to/uwsWlZ) in the "js-tuesday" channel on Tuesday at 9PM EST, so mark your calendars and stop by! There, we'll review the project, look at code together, and share what we learned.
 
 In particular, we hope to:
 
@@ -19,7 +19,7 @@ JavaScript is already running in your browser, so there's nothing to install the
 You'll need a Github account and some knowledge of git. If you're not comfortable using git, that's perfectly fine! Start by looking at the following resources:
 
 - [Github For Beginners: Don't Get Scared, Get Started](http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1)
-An incredibly newbie-friendly introduction to the world of git and Github. Written by a non-developer, it's a great introduction to many of the common terms and concepts. 
+An incredibly newbie-friendly introduction to the world of git and Github. Written by a non-developer, it's a great introduction to many of the common terms and concepts.
 
 - [Github For Beginners: Commit, Push and Go](http://readwrite.com/2013/10/02/github-for-beginners-part-2)
 Part two of the above article, this post takes you through setting up a git repo and performing common commands in your repo. Open up your terminal and follow along to get the most out of this post.
@@ -52,7 +52,7 @@ We use pull requests so you can get your code reviewed by others before merging 
 - Assign that feature to yourself.
 - Clone this repo.
 - Make a feature branch for the issue you're working on. The first part of the branch name should be your initials, like this: `sy-allows-users-to-update-avatar`.
-- Push your branch to origin. 
+- Push your branch to origin.
 - When your feature is done and ready to be reviewed, make pull request.
 - Copy and paste your pull request link to the 'js-tuesday' Slack channel for review.
 - Once you get some feedback on your pull request and a final thumbs up from a community member, merge to master & the close branch.
@@ -61,11 +61,9 @@ We use pull requests so you can get your code reviewed by others before merging 
 Join us at 9PM EST on Tuesday to review code and talk about the project. Come with questions, code to show, and be ready to share what you're learning!
 
 ## Community rules & guidelines
-The purpose of this project is to learn by working on a real-world application. Use the code reviews as a place to ask questions, offer suggestions, and share your thoughts. When giving feedback, particularly on code reviews, please remember our community rules: be nice, be honest, be supportive. We're all learning, so let's make sure to be kind to one another. 
+The purpose of this project is to learn by working on a real-world application. Use the code reviews as a place to ask questions, offer suggestions, and share your thoughts. When giving feedback, particularly on code reviews, please remember our community rules: be nice, be honest, be supportive. We're all learning, so let's make sure to be kind to one another.
 
 For more details, see our full [Code of Conduct](http://www.codenewbie.org/blogs/our-code-of-conduct). We're excited to learn with you :)
 
 [1]: https://codenewbie.typeform.com/to/uwsWlZ
 
-
-### [Optional] Setting up Yeoman
