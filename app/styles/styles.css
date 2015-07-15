@@ -120,6 +120,11 @@ body {
   cursor: default;
 }
 
+#word-to-guess {
+  background-color: green;
+  max-width: 100%;
+}
+
 #alphabet-keypad { 
   float: left;
   max-width: 100%;
@@ -134,4 +139,15 @@ body {
 #graveyard {
   background-color: lightblue; 
   max-width: 100%;
+}
+
+.character-block {
+  display: inline-block;
+  width: 3em;
+  height: 4em;
+  margin: .2em;
+}
+
+.is-letter {
+  box-shadow: 0 .1em 0 0 black;
 }

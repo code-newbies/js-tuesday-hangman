@@ -1,24 +1,3 @@
-/* For picking letters from alphabet keypad. Returns the
-   letter chosen or "already picked"
-*/
-function pickLetter(letter) {
-  "use strict";
-  var result;
-  //checks if the class name is still a button or not
-  if (letter.className === "letter-button") {
-    //if it's still a button it returns the letter
-    //then disables the button
-    result = letter.innerHTML;
-    letter.className = "letter-disabled";
-  } else {
-    //if the buttons is disabled it logs this
-    result = "already picked";
-  }
-
-  console.log(result);// for testing, remove later
-  return result;
-}
-
 // adding dictionary and word filter //
 var hangmanWords = [
   "the","of","and","a","to","in","is","you","that","it","he",
@@ -44,9 +23,31 @@ var hardArray = hangmanWords.filter(function(word){
   return word.length > 4;
 });
 
+/* For picking letters from alphabet keypad. Returns the
+   letter chosen or "already picked"
+*/
+function pickLetter(letter) {
+  "use strict";
+  var result;
+  //checks if the class name is still a button or not
+  if (letter.className === "letter-button") {
+    //if it's still a button it returns the letter
+    //then disables the button
+    result = letter.innerHTML;
+    letter.className = "letter-disabled";
+  } else {
+    //if the buttons is disabled it logs this
+    result = "already picked";
+  }
+
+  console.log(result);// for testing, remove later
+  return result;
+}
+
 //picks out a word in the "hangmanWords" array and returns it
 function wordSelect (array) {
   var num = Math.floor(Math.random() * array.length);
   var word = array[num];
   return word;
 }
+
