@@ -62,6 +62,9 @@ function pickLetter(letter) {
     //if the buttons is disabled it logs this
     result = "already picked";
   }
+  // for testing, remove later
+  console.log(result);
+  console.log(resultMatches);
   return result;
 }
 
@@ -83,9 +86,6 @@ function handlePickedLetter(result) {
     ind = currentWord.indexOf(result.toLowerCase(), ind + 1);
   }
 
-  // for testing, remove later
-  console.log(result);
-  console.log(resultMatches);
 
   //if resultMatches is greater than 0 proceed to place them in the dom
   if(resultMatches.length > 0) {
