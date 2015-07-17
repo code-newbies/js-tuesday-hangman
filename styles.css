@@ -1,13 +1,30 @@
 /* OUR ADDITION */
 /* styles for the alphabet keypad */
+#alphabet-keypad, #hangman-graphic, #letter-graveyard {
+	display: inline-block;
+	vertical-align: middle;
+	float: none;
+}
+
+#alphabet-keypad {
+	margin: 1em;
+}
+#hangman-graphic img {
+	width: 100%;
+}
 .letter-button, .letter-disabled {
-  border-radius: 50%;
-  display: inline;
+	margin: 0.13em;
+	padding: 0;
+	padding-left: .38em;
+	
+	border-radius: 100%;
+  display: inline-block;
   font-family: monospace;
-  font-size: 2em;
-  line-height: 2em;
-  padding: 0.3em 0.6em;
-  
+  font-size: 20px;
+	
+	height: 1.42em;
+	width: 1.42em;
+	
   transition: color 0.2s,
               background-color 0.2s;
 }
@@ -19,6 +36,10 @@
   background-color: rgb(60, 160, 210);
   color: white;
   cursor: pointer;
+}
+
+.letter-button:active {
+	background-color: red;
 }
 .letter-disabled {
   border: 1px solid lightgrey;
