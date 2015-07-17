@@ -1,20 +1,28 @@
 /* For picking letters from alphabet keypad. Returns the
-   letter chosen or "already picked"
+   letter chosen.
 */
-function pickLetter(letter) {
-  "use strict";
-  var result;
+$("#alphabet-keypad").on("click", ".letter-button", pickLetter);
 
-  if (letter.className === "letter-button") {
-    result = letter.innerHTML;
-    letter.className = "letter-disabled";
-  } else {
-    result = "already picked";
-  }
+function pickLetter() {
+  var letterChosen = $(this);
+  
+  letterChosen
+    .removeClass("letter-button")
+    .addClass("letter-disabled");
 
-  console.log(result);    // for testing, remove later
-  return result;
+  // Next two lines to be refactored into interface for
+  //   checking if the letter is in the word.
+  
+  letterChosen = letterChosen.html();
+  
+  verify(letterChosen);
 }
+
+// placeholder for verifying the letter
+function verify(letter) {
+  console.log(letter);
+}
+
 
 // adding dictionary and word filter //
 
