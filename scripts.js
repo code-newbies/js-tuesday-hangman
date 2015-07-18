@@ -1,6 +1,6 @@
-/* For picking letters from alphabet keypad. Returns the
-   letter chosen.
-*/
+/*
+ * Pick from alphabet keypad. Returns the letter chosen.
+ */
 $("#alphabet-keypad").on("click", ".letter-button", pickLetter);
 
 function pickLetter() {
@@ -24,9 +24,36 @@ function verify(letter) {
 }
 
 
+/*
+ * Hangman Object with methods loseLife() and reset()
+ */
+var hangmanObject = function () {
+	var livesLost = 0;
+	
+	return {
+		loseLife : function () {
+			if (livesLost < 7) {
+				++livesLost;
+				$("#hangman-frame" + livesLost).css("opacity", 1);
+			}
+		},
+		
+		reset : function () {
+			for (var i = 1; i <= livesLost; ++i) {
+				$("#hangman-frame" + i).css("opacity", 0);
+			}
+			livesLost = 0;
+		}
+	};
+}();
+
+// Next 2 lines will be refactored into interface for
+//   losing a life and reseting the game
+$("#lose-life").on("click", hangmanObject.loseLife);
+$("#reset").on("click", hangmanObject.reset);
+
+
 // adding dictionary and word filter //
-
-
 var hangmanWords = [
   "the","of","and","a","to","in","is","you","that","it","he",
    "was","for","on","are","as","with","his","they","i","at","be",
