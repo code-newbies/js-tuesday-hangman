@@ -1,81 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Hangman</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width">
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="styles.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <h1 class="title">Hangman</h1>
+    
+    <div class="row">
+      <div id="alphabet-keypad" class="col-sm-4">
+        <div class="letter-button">A</div>
+        <div class="letter-button">B</div>
+        <div class="letter-button">C</div>
+        <div class="letter-button">D</div>
+        <div class="letter-button">E</div>
+        <div class="letter-button">F</div>
+        <div class="letter-button">G</div>
+        <div class="letter-button">H</div>
+        <div class="letter-button">I</div>
+        <div class="letter-button">J</div>
+        <div class="letter-button">K</div>
+        <div class="letter-button">L</div>
+        <div class="letter-button">M</div>
+        <div class="letter-button">N</div>
+        <div class="letter-button">O</div>
+        <div class="letter-button">P</div>
+        <div class="letter-button">Q</div>
+        <div class="letter-button">R</div>
+        <div class="letter-button">S</div>
+        <div class="letter-button">T</div>
+        <div class="letter-button">U</div>
+        <div class="letter-button">V</div>
+        <div class="letter-button">W</div>
+        <div class="letter-button">X</div>
+        <div class="letter-button">Y</div>
+        <div class="letter-button">Z</div>
+      </div>
+      
+      <div id="hangman-graphic" class="col-sm-3">
+        <img src="hangman-graphic/background.png">
+        <img class="hangman-frames" id="hangman-frame0" 
+             src="hangman-graphic/hangman0.jpg">
+        <img class="hangman-frames" id="hangman-frame1" 
+             src="hangman-graphic/hangman1.jpg">
+        <img class="hangman-frames" id="hangman-frame2" 
+             src="hangman-graphic/hangman2.jpg">
+        <img class="hangman-frames" id="hangman-frame3" 
+             src="hangman-graphic/hangman3.jpg">
+        <img class="hangman-frames" id="hangman-frame4" 
+             src="hangman-graphic/hangman4.jpg">
+        <img class="hangman-frames" id="hangman-frame5" 
+             src="hangman-graphic/hangman5.jpg">
+        <img class="hangman-frames" id="hangman-frame6" 
+             src="hangman-graphic/hangman6.jpg">
+        <img class="hangman-frames" id="hangman-frame7" 
+             src="hangman-graphic/hangman7.jpg">
+      
+        <div class="hangman-controls">
+          <button id="lose-life" class="btn btn-danger">
+          Lose Life
+          </button>
   
-<body>
-	<h1 class="title">Hangman</h1>
-	
-	<div class="row">
-		<div id="alphabet-keypad" class="col-sm-4">
-			<div class="letter-button">A</div>
-			<div class="letter-button">B</div>
-			<div class="letter-button">C</div>
-			<div class="letter-button">D</div>
-			<div class="letter-button">E</div>
-			<div class="letter-button">F</div>
-			<div class="letter-button">G</div>
-			<div class="letter-button">H</div>
-			<div class="letter-button">I</div>
-			<div class="letter-button">J</div>
-			<div class="letter-button">K</div>
-			<div class="letter-button">L</div>
-			<div class="letter-button">M</div>
-			<div class="letter-button">N</div>
-			<div class="letter-button">O</div>
-			<div class="letter-button">P</div>
-			<div class="letter-button">Q</div>
-			<div class="letter-button">R</div>
-			<div class="letter-button">S</div>
-			<div class="letter-button">T</div>
-			<div class="letter-button">U</div>
-			<div class="letter-button">V</div>
-			<div class="letter-button">W</div>
-			<div class="letter-button">X</div>
-			<div class="letter-button">Y</div>
-			<div class="letter-button">Z</div>
-		</div>
-
-		<div id="hangman-graphic" class="col-sm-3">
-			<img src="hangman-graphic/background.png">
-			<img class="hangman-frames" id="hangman-frame0" 
-					 src="hangman-graphic/hangman0.jpg">
-			<img class="hangman-frames" id="hangman-frame1" 
-					 src="hangman-graphic/hangman1.jpg">
-			<img class="hangman-frames" id="hangman-frame2" 
-					 src="hangman-graphic/hangman2.jpg">
-			<img class="hangman-frames" id="hangman-frame3" 
-					 src="hangman-graphic/hangman3.jpg">
-			<img class="hangman-frames" id="hangman-frame4" 
-					 src="hangman-graphic/hangman4.jpg">
-			<img class="hangman-frames" id="hangman-frame5" 
-					 src="hangman-graphic/hangman5.jpg">
-			<img class="hangman-frames" id="hangman-frame6" 
-					 src="hangman-graphic/hangman6.jpg">
-			<img class="hangman-frames" id="hangman-frame7" 
-					 src="hangman-graphic/hangman7.jpg">
-			
-			<div class="hangman-controls">
-				<button id="lose-life" class="btn btn-danger">
-					Lose Life
-				</button>
-				<button id="reset" class="btn btn-success">
-					Reset
-				</button>
-			</div>
-		</div>
-
-		<div id="letter-graveyard" class="col-sm-4"></div>
-	</div>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script src="scripts.js"></script>
-</body>
+          <button id="reset" class="btn btn-success">
+          Reset
+          </button>
+        </div>
+      </div>
+      
+      <div id="letter-graveyard" class="col-sm-4"></div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
 </html>

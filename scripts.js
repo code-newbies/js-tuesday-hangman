@@ -28,23 +28,23 @@ function verify(letter) {
  * Hangman Object with methods loseLife() and reset()
  */
 var hangmanObject = function () {
-	var livesLost = 0;
-	
-	return {
-		loseLife : function () {
-			if (livesLost < 7) {
-				++livesLost;
-				$("#hangman-frame" + livesLost).css("opacity", 1);
-			}
-		},
-		
-		reset : function () {
-			for (var i = 1; i <= livesLost; ++i) {
-				$("#hangman-frame" + i).css("opacity", 0);
-			}
-			livesLost = 0;
-		}
-	};
+  var livesLost = 0;
+  
+  return {
+    loseLife : function () {
+      if (livesLost < 7) {
+        ++livesLost;
+        $("#hangman-frame" + livesLost).css("opacity", 1);
+      }
+    },
+    
+    reset : function () {
+      for (var i = 1; i <= livesLost; ++i) {
+        $("#hangman-frame" + i).css("opacity", 0);
+      }
+      livesLost = 0;
+    }
+  };
 }();
 
 // Next 2 lines will be refactored into interface for
