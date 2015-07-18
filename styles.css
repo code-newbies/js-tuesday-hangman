@@ -74,10 +74,10 @@
 
 /* To be refactored for the letter graveyard */
 #letter-graveyard {
-	max-width: 50%;
-	padding: 3em;
-	text-align: center;
+  max-width: 50%;
+  padding: 3em;
+  text-align: center;
 }
 #letter-graveyard img {
-	max-width: 100%;
+  max-width: 100%;
 }
