@@ -71,3 +71,13 @@
   margin: 0.5em 0;
   text-align: center;
 }
+
+/* To be refactored for the letter graveyard */
+#letter-graveyard {
+	max-width: 50%;
+	padding: 3em;
+	text-align: center;
+}
+#letter-graveyard img {
+	max-width: 100%;
+}
