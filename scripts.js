@@ -29,7 +29,7 @@ function verify(letter) {
  */
 var hangmanObject = function () {
   var livesLost = 0,
-			maxLife = 7;
+      maxLife = 7;
   
   return {
     loseLife : function () {
