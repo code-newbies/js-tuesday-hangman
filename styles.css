@@ -47,11 +47,13 @@
 	max-width: 50%;
 }
 #hangman-graphic img {
+	margin-left: 1em;
 	max-width: 100%;
 }
 .hangman-frames {
 	opacity: 0;
 	position: absolute;
+	left: 0;
 	top: 0;
 	
 	transition: opacity 0.2s;
