@@ -28,16 +28,21 @@ function verify(letter) {
  * Hangman Object with methods loseLife() and reset()
  */
 var hangmanObject = function () {
-  var livesLost = 0;
+  var livesLost = 0,
+			maxLife = 7;
   
   return {
     loseLife : function () {
-      if (livesLost < 7) {
+      if (livesLost < maxLife) {
         ++livesLost;
         $("#hangman-frame" + livesLost).css("opacity", 1);
       }
     },
     
+		isDead : function () {
+			return livesLost === maxLife;
+		},
+		
     reset : function () {
       for (var i = 1; i <= livesLost; ++i) {
         $("#hangman-frame" + i).css("opacity", 0);
