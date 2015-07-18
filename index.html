@@ -10,8 +10,9 @@
 </head>
   
 <body>
+	<h1 class="title">Hangman</h1>
 	<div class="row">
-		<div id="alphabet-keypad" class="col-sm-3">
+		<div id="alphabet-keypad" class="col-sm-4">
 			<div class="letter-button">A</div>
 			<div class="letter-button">B</div>
 			<div class="letter-button">C</div>
@@ -40,16 +41,31 @@
 			<div class="letter-button">Z</div>
 		</div>
 
-		<div id="hangman-graphic" class="col-sm-5">
-			<img src="hangman-graphic/hangman0.jpg">
-			<img class="ontop" src="hangman-graphic/hangman1.jpg">
-			<img class="ontop" src="hangman-graphic/hangman2.jpg">
-			<button class="btn btn-danger">Wrong Guess</button>
-			<button class="btn btn-success">Reset</button>
+		<div id="hangman-graphic" class="col-sm-3">
+			<img src="hangman-graphic/background.png">
+			<img class="hangman-frames" id="hangman-frame0" 
+					 src="hangman-graphic/hangman0.jpg">
+			<img class="hangman-frames" id="hangman-frame1" 
+					 src="hangman-graphic/hangman1.jpg">
+			<img class="hangman-frames" id="hangman-frame2" 
+					 src="hangman-graphic/hangman2.jpg">
+			<img class="hangman-frames" id="hangman-frame3" 
+					 src="hangman-graphic/hangman3.jpg">
+			<img class="hangman-frames" id="hangman-frame4" 
+					 src="hangman-graphic/hangman4.jpg">
+			<img class="hangman-frames" id="hangman-frame5" 
+					 src="hangman-graphic/hangman5.jpg">
+			<img class="hangman-frames" id="hangman-frame6" 
+					 src="hangman-graphic/hangman6.jpg">
+			<img class="hangman-frames" id="hangman-frame7" 
+					 src="hangman-graphic/hangman7.jpg">
+			<div class="hangman-controls">
+				<button class="btn btn-danger">Lose Life</button>
+				<button class="btn btn-success">Reset</button>
+			</div>
 		</div>
 
-		<div id="letter-graveyard" class="col-sm-3">
-			helo
+		<div id="letter-graveyard" class="col-sm-4">
 		</div>
 	</div>
 

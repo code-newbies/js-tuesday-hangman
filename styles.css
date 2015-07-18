@@ -7,26 +7,26 @@
 }
 
 #alphabet-keypad {
+	margin-left: 3%;
+	text-align: center;
 }
 #hangman-graphic {
 	max-width: 50%;
-	text-align: center;
 }
 #hangman-graphic img {
 	max-width: 100%;
 }
 .letter-button, .letter-disabled {
-	margin: 0.13em;
-	padding: 0;
-	padding-left: .38em;
+	margin: 0.2em 0.1em;
+	padding-top: 0.1em;
 	
-	border-radius: 100%;
+	border-radius: 50%;
   display: inline-block;
   font-family: monospace;
-  font-size: 1.8em;
+  font-size: 1.6em;
 	
-	height: 1.5em;
-	width: 1.5em;
+	height: 1.6em;
+	width: 1.6em;
 	
   transition: color 0.2s,
               background-color 0.2s;
@@ -50,9 +50,19 @@
   cursor: default;
 }
 
-
-.ontop {
-	opacity: 0;
+.title {
+	margin: 0.3em 0;
+	text-align: center;
+}
+.row {
+	width: 100%;
+}
+.hangman-frames {
+	opacity: 0.5;
 	position: absolute;
 	top: 0;
+}
+.hangman-controls {
+	margin-top: 3em;
+	margin-left: 30%;
 }
