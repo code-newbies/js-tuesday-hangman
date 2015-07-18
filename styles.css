@@ -1,31 +1,27 @@
 /* OUR ADDITION */
-/* styles for the alphabet keypad */
+/* Vertically align alpha keypad, hangman, and graveyard */
 #alphabet-keypad, #hangman-graphic, #letter-graveyard {
 	display: inline-block;
 	vertical-align: middle;
 	float: none;
 }
+.row {
+	width: 100%;
+}
 
+/* Styles for the alphabet keypad */
 #alphabet-keypad {
-	margin-left: 3%;
+	margin-left: 4%;
 	text-align: center;
 }
-#hangman-graphic {
-	max-width: 50%;
-}
-#hangman-graphic img {
-	max-width: 100%;
-}
 .letter-button, .letter-disabled {
-	margin: 0.2em 0.1em;
-	padding-top: 0.1em;
-	
 	border-radius: 50%;
   display: inline-block;
   font-family: monospace;
   font-size: 1.6em;
-	
 	height: 1.6em;
+	margin: 0.2em 0.1em;
+	padding-top: 0.1em;
 	width: 1.6em;
 	
   transition: color 0.2s,
@@ -40,29 +36,36 @@
   color: white;
   cursor: pointer;
 }
-
-.letter-button:active {
-	background-color: red;
-}
 .letter-disabled {
   border: 1px solid lightgrey;
   color: lightgrey;
   cursor: default;
 }
 
-.title {
-	margin: 0.3em 0;
-	text-align: center;
+/* Styles for the hangman graphic */
+#hangman-graphic {
+	max-width: 50%;
 }
-.row {
-	width: 100%;
+#hangman-graphic img {
+	max-width: 100%;
 }
 .hangman-frames {
-	opacity: 0.5;
+	opacity: 0;
 	position: absolute;
 	top: 0;
+	
+	transition: opacity 0.2s;
+}
+#hangman-frame0 {
+	opacity: 1;
 }
 .hangman-controls {
 	margin-top: 3em;
-	margin-left: 30%;
+	text-align: center;
+}
+
+/* Other styles */
+.title {
+	margin: 0.5em 0;
+	text-align: center;
 }
