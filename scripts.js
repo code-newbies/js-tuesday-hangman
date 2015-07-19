@@ -73,20 +73,20 @@ function wordSelect (array) {
 }
 
 function handlePickedLetter(letterPicked) {
-  var resultMatches = [];
+  var letterMatches = [];
   var ind = currentWord.indexOf(letterPicked.toLowerCase());
 
   //if letterPicked matches one or more letters in the current word
-  //push all instances of that letter to resultMatches
+  //push all instances of that letter to letterMatches
   while (ind !== -1) {
-    resultMatches.push(ind);
+    letterMatches.push(ind);
     ind = currentWord.indexOf(letterPicked.toLowerCase(), ind + 1);
   }
 
-  //if resultMatches is greater than 0 proceed to place them in the dom
-  if(resultMatches.length > 0) {
+  //if letterMatches is greater than 0 proceed to place them in the dom
+  if(letterMatches.length > 0) {
     var letterBlocks = document.getElementsByClassName("is-letter");
-    resultMatches.map(function(num) {
+    letterMatches.map(function(num) {
       
       var domElem = document.createElement("span");
       domElem.innerHTML = currentWordFull[num];      
