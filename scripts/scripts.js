@@ -25,37 +25,32 @@ function verify(letter) {
 
 
 /*
- * Hangman Object with methods loseLife() and reset()
+ * Hangman graphic with methods addBodyPart() and reset()
  */
-var hangmanObject = function () {
-  var livesLost = 0,
-      maxLife = 7;
+var hangmanGraphic = function () {
+  var bodyParts = 0,
+      maxParts = 7;
   
   return {
-    loseLife : function () {
-      if (livesLost < maxLife) {
-        ++livesLost;
-        $("#hangman-frame" + livesLost).css("opacity", 1);
+    addBodyPart : function () {
+      if (bodyParts < maxParts) {
+        ++bodyParts;
+        $("#hangman-frame" + bodyParts).css("opacity", 1);
       }
-    },
-    
-    isDead : function () {
-      return livesLost === maxLife;
     },
 		
     reset : function () {
-      for (var i = 1; i <= livesLost; ++i) {
-        $("#hangman-frame" + i).css("opacity", 0);
-      }
-      livesLost = 0;
+      $(".hangman-frames").css("opacity", 0);
+      $("#hangman-frame0").css("opacity", 1);
+      bodyParts = 0;
     }
   };
 }();
 
 // Next 2 lines will be refactored into interface for
 //   losing a life and reseting the game
-$("#lose-life").on("click", hangmanObject.loseLife);
-$("#reset").on("click", hangmanObject.reset);
+$("#lose-life").on("click", hangmanGraphic.addBodyPart);
+$("#reset").on("click", hangmanGraphic.reset);
 
 
 // adding dictionary and word filter //
