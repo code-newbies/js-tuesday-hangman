@@ -72,15 +72,15 @@ function wordSelect (array) {
   return word;
 }
 
-function handlePickedLetter(result) {
+function handlePickedLetter(letterPicked) {
   var resultMatches = [];
-  var ind = currentWord.indexOf(result.toLowerCase());
+  var ind = currentWord.indexOf(letterPicked.toLowerCase());
 
-  //if result matches one or more letters in the current word
+  //if letterPicked matches one or more letters in the current word
   //push all instances of that letter to resultMatches
   while (ind !== -1) {
     resultMatches.push(ind);
-    ind = currentWord.indexOf(result.toLowerCase(), ind + 1);
+    ind = currentWord.indexOf(letterPicked.toLowerCase(), ind + 1);
   }
 
   //if resultMatches is greater than 0 proceed to place them in the dom
@@ -96,7 +96,7 @@ function handlePickedLetter(result) {
     //if letterBlock is not greater than 0 put the letter in the graveyard
     var domElem = document.createElement("div");
     domElem.className = "grave-letter";
-    domElem.innerHTML = result;
+    domElem.innerHTML = letterPicked;
     document.getElementById("graveyard").appendChild(domElem);
   }
 }
