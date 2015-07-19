@@ -78,7 +78,7 @@ function handlePickedLetter(result) {
 
   //if result matches one or more letters in the current word
   //push all instances of that letter to resultMatches
-  while (ind != -1) {
+  while (ind !== -1) {
     resultMatches.push(ind);
     ind = currentWord.indexOf(result.toLowerCase(), ind + 1);
   }
