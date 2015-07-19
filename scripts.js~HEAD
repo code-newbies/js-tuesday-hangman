@@ -25,7 +25,7 @@ var hardArray = hangmanWords.filter(function(word){
 //sets the word to be guessed
 var currentWordFull = easyArray[47],//IMPORTANT: replace the number with wordSelect (the function) for production use
 //set an all lower case version of the current word
-currentWord = currentWordFull.toLowerCase();
+    currentWord = currentWordFull.toLowerCase();
 
 //creates blocks in the DOM indicating where there are letters and spaces
 currentWord.split("").map(function(elem) {
@@ -39,7 +39,6 @@ currentWord.split("").map(function(elem) {
     domElem.className = "character-block";
   }
 
-  //console.log(domElem);//for testing, remove later
   guessWordBlock.appendChild(domElem);
 });
 
@@ -68,7 +67,7 @@ function pickLetter(letter) {
 
 //picks out a word in the "hangmanWords" array and returns it
 function wordSelect (array) {
-  var num = Math.floor(Math.random() * array.length);
+  var num = Math.floor(Math.random() * array.length - 1);
   var word = array[num];
   return word;
 }
@@ -79,18 +78,15 @@ function handlePickedLetter(result) {
 
   //if result matches one or more letters in the current word
   //push all instances of that letter to resultMatches
-  while (ind != -1) {
+  while (ind !== -1) {
     resultMatches.push(ind);
     ind = currentWord.indexOf(result.toLowerCase(), ind + 1);
   }
-
-  console.log(resultMatches);
 
   //if resultMatches is greater than 0 proceed to place them in the dom
   if(resultMatches.length > 0) {
     var letterBlocks = document.getElementsByClassName("is-letter");
     resultMatches.map(function(num) {
-      console.log(num)
       
       var domElem = document.createElement("span");
       domElem.innerHTML = currentWordFull[num];      

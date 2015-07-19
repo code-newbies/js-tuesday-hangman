@@ -1,0 +1,68 @@
+/* OUR ADDITION */
+/* styles for the alphabet keypad */
+
+.letter-button, .letter-disabled {
+  line-height: 2em;
+  padding: 0.3em 0.65em;
+  border-radius: 50%;
+  display: inline;
+  font-family: monospace;
+  font-size: 2em;
+  transition: color 0.2s,
+              background-color 0.2s;
+}
+
+.letter-button {
+  border: 1px solid rgb(60,160,210);
+  color: rgb(60,160,210);
+}
+
+.letter-button:hover {
+  color: white;
+  background-color: rgb(60,160,210);
+  cursor: pointer;
+}
+
+.letter-disabled {
+  border: 1px solid lightgrey;
+  color: lightgrey;
+  cursor: default;
+}
+
+#alphabet-keypad {
+  float: left;
+  max-width: 100%;
+  padding: auto;
+}
+
+#graveyard {
+  background-color: lightblue; 
+  max-width: 100%;
+}
+
+.character-block {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  margin: .2em;
+  vertical-align: top;
+  text-align: center;
+}
+.character-block span {
+  font-size: 2em;
+  padding: 0.3em 0.4em;
+}
+
+.is-letter {
+  box-shadow: 0 .1em 0 0 black;
+}
+
+.grave-letter {
+  display: inline-block;
+  margin: .2em;
+  vertical-align: top;
+  font-size: 2em;
+  padding: 0.3em 0.4em;
+  border: 1px solid rgb(0,0,0);
+  border-radius: 100% 100% 0 0 ;
+}
