@@ -23,9 +23,9 @@ var hardArray = hangmanWords.filter(function(word){
   return word.length > 4;
 });
 //sets the word to be guessed
-var currentWordFull = easyArray[47],//IMPORTANT: replace the number with wordSelect (the function) for production use
+var currentWordFull = easyArray[47];//IMPORTANT: replace the number with wordSelect (the function) for production use
 //set an all lower case version of the current word
-currentWord = currentWordFull.toLowerCase();
+var currentWord = currentWordFull.toLowerCase();
 
 //creates blocks in the DOM indicating where there are letters and spaces
 currentWord.split("").map(function(elem) {
