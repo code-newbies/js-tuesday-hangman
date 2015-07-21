@@ -6,10 +6,41 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="styles.css"> <!-- corrected path to where the file is==same directory as index-->
 </head>
 <body>
-    <div id="alphabet-keypad">
+<div class= 'container'>
+<div class='row'>
+<div id='info' class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Welcome to Hangman!</h3>
+      </div>
+      <div class="modal-body">
+        <h4>Here's the scoop: The objective is to guess what word fills the blank spaces below the gallows [heh, heh].</h4>
+        <ol>
+            <li>Click 'Start Game'.</li>
+            <li>Click to choose a letter from the left.</li>
+            <li>If the letter is contained in the word, it will display in the word box below the gallows OR if not part of the hangman will display, and the letter you chose will go to the graveyard.</li>
+            <li>Rinse and repeat until either you guessed the whole word or the man is hung [heh, heh].</li>
+            <!-- [sudden death button infor] -->
+        </ol>
+      </div>
+      <div class="modal-footer">
+
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+        <!-- <button type="button" class="btn btn-primary">Start Game</button> -->
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+ <button type="button" class="btn btn-default" data-toggle="modal" data-target="#info">directions again?</button>
+
+ <div class='col-md-10 game-board'><!-- 'game board' class added to set up working example of modal directions display preceding the game -->
+  <div id="alphabet-keypad">
         <div class="letter-button" onclick="pickLetter(this)">A</div>
         <div class="letter-button" onclick="pickLetter(this)">B</div>
         <div class="letter-button" onclick="pickLetter(this)">C</div>
@@ -37,10 +68,14 @@
         <div class="letter-button" onclick="pickLetter(this)">Y</div>
         <div class="letter-button" onclick="pickLetter(this)">Z</div>
        </div>
+   </div><!-- end columns -->
+</div><!-- end row -->
+</div><!-- end container -->
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="/scripts.js"></script>
+    <script src="hangModal.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

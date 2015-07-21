@@ -1,4 +1,11 @@
 /* OUR ADDITION */
+/* styles for game board area of page */
+.gameboard{
+    display: block;
+    width: 100%;
+    margin: 1.5em auto;
+    z-index: 0;
+}
 /* styles for the alphabet keypad */
 
 .letter-button, .letter-disabled {
