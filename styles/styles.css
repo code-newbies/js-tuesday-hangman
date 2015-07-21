@@ -81,3 +81,21 @@
 #letter-graveyard img {
   max-width: 100%;
 }
+
+/* Styles used to add fill in the blanks wrt the word that has to be guessed */
+.character-block {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  margin: .2em;
+  vertical-align: top;
+  text-align: center;
+}
+.character-block span {
+  font-size: 2em;
+  padding: 0.3em 0.4em;
+}
+
+.is-letter {
+  box-shadow: 0 .1em 0 0 black;
+}
