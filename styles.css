@@ -34,3 +34,31 @@
   max-width: 100%;
   padding: auto;
 }
+
+.letter-hide {
+  visibility: hidden;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: monospace;
+  font-kerning: normal;
+}
+
+.letter-style {
+  margin:0.5em;
+  padding:1em;
+  border-bottom: 1px solid #000;
+  padding: 1em;
+  border: 0.5em solid rgba(0,0,0,0.75);
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.letter-show {
+  visibility: visible;
+}
+
+#puzzle-box {
+  padding: 1em;
+  text-align: center;
+}
