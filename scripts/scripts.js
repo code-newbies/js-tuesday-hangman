@@ -1,40 +1,32 @@
 /*
  * Pick from alphabet keypad. Returns the letter chosen.
  */
+$("#alphabet-keypad").on("click", ".letter-button", pickLetter);
 
-function pickLetter(letter) {
-  "use strict";
-  var result;
-  //checks if the class name is still a button or not
-  if (letter.className === "letter-button") {
-    //if it's still a button it returns the letter
-    //then disables the button
-    result = letter.innerHTML;
-    letter.className = "letter-disabled";
+function pickLetter() {
+  var letterPicked = $(this);
+  
+  letterPicked
+    .removeClass("letter-button")
+    .addClass("letter-disabled");
 
-    //calls this function to deal with where the letter goes
-    handlePickedLetter(result);
-  } else {
-    //if the buttons is disabled it logs this
-    result = "already picked";
-  }
-  // for testing, remove later
-  console.log(result);
+  letterPicked = letterPicked.html();
+  handlePickedLetter(letterPicked);
 }
 
-function handlePickedLetter(result) {
+function handlePickedLetter(letterPicked) {
   var resultMatches = [];
-  var ind = currentWord.indexOf(result.toLowerCase());
+  var ind = currentWord.indexOf(letterPicked.toLowerCase());
 
-  //if result matches one or more letters in the current word
-  //push all instances of that letter to resultMatches
+  // if letterPicked matches one or more letters in the current word
+  // push all instances of that letter to resultMatches
   while (ind !== -1) {
     resultMatches.push(ind);
-    ind = currentWord.indexOf(result.toLowerCase(), ind + 1);
+    ind = currentWord.indexOf(letterPicked.toLowerCase(), ind + 1);
   }
 
   //if resultMatches is greater than 0 proceed to place them in the dom
-  if(resultMatches.length > 0) {
+  if (resultMatches.length > 0) {
     var letterBlocks = document.getElementsByClassName("is-letter");
     resultMatches.map(function(num) {
 
@@ -46,15 +38,10 @@ function handlePickedLetter(result) {
     //if letterBlock is not greater than 0 put the letter in the graveyard
     var domElem = document.createElement("div");
     domElem.className = "grave-letter";
-    domElem.innerHTML = result;
+    domElem.innerHTML = letterPicked;
     document.getElementById("letter-graveyard").appendChild(domElem);
     hangmanGraphic.addBodyPart();
   }
-}
-
-// placeholder for verifying the letter
-function verify(letter) {
-  console.log(letter);
 }
 
 
@@ -111,25 +98,23 @@ var hardArray = hangmanWords.filter(function(word){
 });
 
 function wordSelect (array) {
-  var num = Math.floor(Math.random() * array.length);
+  var num = Math.floor(Math.random() * (array.length - 1));
   var word = array[num];
   return word;
 }
 
-var currentWordFull = easyArray[47],//IMPORTANT: replace the number with wordSelect (the function) for production use
+var currentWordFull = easyArray[47];//IMPORTANT: replace the number with wordSelect (the function) for production use
+
 //set an all lower case version of the current word
-currentWord = currentWordFull.toLowerCase();
+var currentWord = currentWordFull.toLowerCase();
 
 //creates blocks in the DOM indicating where there are letters and spaces
-currentWord.split("").map(function(elem) {
+currentWord.split("").map(function(character) {
   var guessWordBlock = document.getElementById("word-to-guess");
-
-  // var guessWordBlock = $("#word-to-guess")[0];
 
   var domElem = document.createElement("div");
 
-
-  if(elem.match(/[a-z]/i)) {
+  if (character.match(/[a-z]/i)) {
     domElem.className = "character-block is-letter";
 
   } else {
