@@ -23,9 +23,9 @@ var hardArray = hangmanWords.filter(function(word){
   return word.length > 4;
 });
 //sets the word to be guessed
-var currentWordFull = easyArray[47];//IMPORTANT: replace the number with wordSelect (the function) for production use
+var currentWordFull = easyArray[47],//IMPORTANT: replace the number with wordSelect (the function) for production use
 //set an all lower case version of the current word
-var currentWord = currentWordFull.toLowerCase();
+    currentWord = currentWordFull.toLowerCase();
 
 //creates blocks in the DOM indicating where there are letters and spaces
 currentWord.split("").map(function(elem) {
@@ -72,21 +72,21 @@ function wordSelect (array) {
   return word;
 }
 
-function handlePickedLetter(letterPicked) {
-  var letterMatches = [];
-  var ind = currentWord.indexOf(letterPicked.toLowerCase());
+function handlePickedLetter(result) {
+  var resultMatches = [];
+  var ind = currentWord.indexOf(result.toLowerCase());
 
-  //if letterPicked matches one or more letters in the current word
-  //push all instances of that letter to letterMatches
+  //if result matches one or more letters in the current word
+  //push all instances of that letter to resultMatches
   while (ind !== -1) {
-    letterMatches.push(ind);
-    ind = currentWord.indexOf(letterPicked.toLowerCase(), ind + 1);
+    resultMatches.push(ind);
+    ind = currentWord.indexOf(result.toLowerCase(), ind + 1);
   }
 
-  //if letterMatches is greater than 0 proceed to place them in the dom
-  if(letterMatches.length > 0) {
+  //if resultMatches is greater than 0 proceed to place them in the dom
+  if(resultMatches.length > 0) {
     var letterBlocks = document.getElementsByClassName("is-letter");
-    letterMatches.map(function(num) {
+    resultMatches.map(function(num) {
       
       var domElem = document.createElement("span");
       domElem.innerHTML = currentWordFull[num];      
@@ -96,7 +96,7 @@ function handlePickedLetter(letterPicked) {
     //if letterBlock is not greater than 0 put the letter in the graveyard
     var domElem = document.createElement("div");
     domElem.className = "grave-letter";
-    domElem.innerHTML = letterPicked;
+    domElem.innerHTML = result;
     document.getElementById("graveyard").appendChild(domElem);
   }
 }
