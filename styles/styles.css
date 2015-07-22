@@ -1,4 +1,12 @@
 /* OUR ADDITION */
+button .pull-right{
+    margin-top:1em;
+}
+.hanghead{
+    display:block;
+    width: 80%;
+    margin: 1em auto;
+}
 /* Vertically align alpha keypad, hangman, and graveyard */
 #alphabet-keypad, #hangman-graphic, #letter-graveyard {
   display: inline-block;

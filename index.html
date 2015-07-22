@@ -15,7 +15,7 @@
 
 
   <body>
-    <h1 class="title">Hangman</h1>
+<div class='row'>   <div class='col-sm-8 hanghead'><button type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#info">directions again?</button><h1 class="title">Hangman</h1></div></div>
 
     <div id='info' class="modal fade">
   <div class="modal-dialog">
@@ -27,27 +27,27 @@
       <div class="modal-body">
         <h4>Here's the scoop: The objective is to guess what word fills the blank spaces below the gallows [heh, heh].</h4>
         <ol>
-            <li>Click 'Start Game'.</li>
+
             <li>Click to choose a letter from the left.</li>
             <li>If the letter is contained in the word, it will display in the word box below the gallows OR if not part of the hangman will display, and the letter you chose will go to the graveyard.</li>
             <li>Rinse and repeat until either you guessed the whole word or the man is hung [heh, heh].</li>
-            <!-- [sudden death button infor] -->
+            <!-- [sudden death button info here if we want] -->
         </ol>
       </div>
       <div class="modal-footer">
 
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 
-        <button type="button" class="btn btn-primary">Start Game!</button>
-        <!-- This is not wired up. I think the code to do it exists, but is not in current master that I used to start this branch. -->
+
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
- <button type="button" class="btn btn-default" data-toggle="modal" data-target="#info">directions again?</button>
+
 
 
     <div class="row">
+
       <div id="alphabet-keypad" class="col-sm-4">
         <div class="letter-button" onclick="pickLetter(this)">A</div>
         <div class="letter-button" onclick="pickLetter(this)">B</div>
