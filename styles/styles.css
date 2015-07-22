@@ -1,0 +1,83 @@
+/* OUR ADDITION */
+/* Vertically align alpha keypad, hangman, and graveyard */
+#alphabet-keypad, #hangman-graphic, #letter-graveyard {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+.row {
+  width: 100%;
+}
+
+/* Styles for the alphabet keypad */
+#alphabet-keypad {
+  margin-left: 4%;
+  text-align: center;
+}
+.letter-button, .letter-disabled {
+  border-radius: 50%;
+  display: inline-block;
+  font-family: monospace;
+  font-size: 1.6em;
+  height: 1.6em;
+  margin: 0.2em 0.1em;
+  padding-top: 0.1em;
+  width: 1.6em;
+
+  transition: color 0.2s,
+  background-color 0.2s;
+}
+.letter-button {
+  border: 1px solid rgb(60, 160, 210);
+  color: rgb(60, 160, 210);
+}
+.letter-button:hover {
+  background-color: rgb(60, 160, 210);
+  color: white;
+  cursor: pointer;
+}
+.letter-disabled {
+  border: 1px solid lightgrey;
+  color: lightgrey;
+  cursor: default;
+}
+
+/* Styles for the hangman graphic */
+#hangman-graphic {
+  max-width: 50%;
+}
+#hangman-graphic img {
+  margin-left: 1em;
+  max-width: 100%;
+}
+.hangman-frames {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  transition: opacity 0.2s;
+}
+#hangman-frame0 {
+  opacity: 1;
+}
+.hangman-controls {
+  margin-top: 3em;
+  text-align: center;
+}
+
+/* Other styles */
+.title {
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+/* To be refactored for the letter graveyard */
+#letter-graveyard {
+  max-width: 50%;
+  padding: 3em;
+  text-align: center;
+}
+#letter-graveyard img {
+  max-width: 100%;
+}
