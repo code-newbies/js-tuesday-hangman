@@ -5,7 +5,7 @@ $("#alphabet-keypad").on("click", ".letter-button", pickLetter);
 
 function pickLetter() {
   var letterPicked = $(this);
-  
+
   letterPicked
     .removeClass("letter-button")
     .addClass("letter-disabled");
@@ -33,6 +33,8 @@ function handlePickedLetter(letterPicked) {
       var domElem = document.createElement("span");
       domElem.innerHTML = currentWordFull[num];
       letterBlocks[num].appendChild(domElem);
+      displayCongratulatoryMessageOnWin();
+
     });
   } else {
     //if letterBlock is not greater than 0 put the letter in the graveyard
@@ -41,6 +43,13 @@ function handlePickedLetter(letterPicked) {
     domElem.innerHTML = letterPicked;
     document.getElementById("letter-graveyard").appendChild(domElem);
     hangmanGraphic.addBodyPart();
+  }
+}
+
+function displayCongratulatoryMessageOnWin(){
+  var correctlyGuessedLettersCount = $(".is-letter > span").length;
+  if (correctlyGuessedLettersCount === currentWord.length) {
+    $("#congratulatory_message").modal('show');
   }
 }
 
