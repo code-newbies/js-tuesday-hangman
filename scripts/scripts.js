@@ -5,7 +5,7 @@ $("#alphabet-keypad").on("click", ".letter-button", pickLetter);
 
 function pickLetter() {
   var letterPicked = $(this);
-  
+
   letterPicked
     .removeClass("letter-button")
     .addClass("letter-disabled");
@@ -64,6 +64,9 @@ var hangmanGraphic = function () {
       $(".hangman-frames").css("opacity", 0);
       $("#hangman-frame0").css("opacity", 1);
       bodyParts = 0;
+      resetAlphabetKeypad();
+      removeGraveyardLetters();
+      removeCorrectlyGuessedLetters();
     }
   };
 }();
@@ -73,6 +76,23 @@ var hangmanGraphic = function () {
 $("#lose-life").on("click", hangmanGraphic.addBodyPart);
 $("#reset").on("click", hangmanGraphic.reset);
 
+function resetAlphabetKeypad(){
+  $("#alphabet-keypad > .letter-disabled").each(function(index, element){
+    $(element).removeClass().addClass('letter-button');
+  });
+}
+
+function removeGraveyardLetters(){
+  $('#letter-graveyard > div').each(function(index, element){
+    $(element).remove();
+  });
+}
+
+function removeCorrectlyGuessedLetters(){
+  $('#word-to-guess').each(function(index, element){
+    $(element).children().html('');
+  });
+}
 
 // adding dictionary and word filter //
 var hangmanWords = [
