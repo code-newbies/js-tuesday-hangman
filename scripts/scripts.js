@@ -16,13 +16,13 @@ function pickLetter() {
 
 function handlePickedLetter(letterPicked) {
   var resultMatches = [];
-  var ind = currentWord.indexOf(letterPicked.toUpperCase());
+  var ind = currentWord.indexOf(letterPicked);
 
   // if letterPicked matches one or more letters in the current word
   // push all instances of that letter to resultMatches
   while (ind !== -1) {
     resultMatches.push(ind);
-    ind = currentWord.indexOf(letterPicked.toUpperCase(), ind + 1);
+    ind = currentWord.indexOf(letterPicked, ind + 1);
   }
 
   //if resultMatches is greater than 0 proceed to place them in the dom
