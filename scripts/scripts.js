@@ -103,7 +103,7 @@ function wordSelect (array) {
   return word;
 }
 
-var currentWordFull = easyArray[47];//IMPORTANT: replace the number with wordSelect (the function) for production use
+var currentWordFull = wordSelect(hangmanWords);//IMPORTANT: replace the number with wordSelect (the function) for production use
 
 //set an all upper case version of the current word
 var currentWord = currentWordFull.toUpperCase();
