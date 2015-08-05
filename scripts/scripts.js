@@ -16,13 +16,13 @@ function pickLetter() {
 
 function handlePickedLetter(letterPicked) {
   var resultMatches = [];
-  var ind = currentWord.indexOf(letterPicked.toLowerCase());
+  var ind = currentWord.indexOf(letterPicked);
 
   // if letterPicked matches one or more letters in the current word
   // push all instances of that letter to resultMatches
   while (ind !== -1) {
     resultMatches.push(ind);
-    ind = currentWord.indexOf(letterPicked.toLowerCase(), ind + 1);
+    ind = currentWord.indexOf(letterPicked, ind + 1);
   }
 
   //if resultMatches is greater than 0 proceed to place them in the dom
@@ -31,7 +31,7 @@ function handlePickedLetter(letterPicked) {
     resultMatches.map(function(num) {
 
       var domElem = document.createElement("span");
-      domElem.innerHTML = currentWordFull[num];
+      domElem.innerHTML = currentWordFull[num].toUpperCase();
       letterBlocks[num].appendChild(domElem);
     });
   } else {
@@ -105,8 +105,8 @@ function wordSelect (array) {
 
 var currentWordFull = easyArray[47];//IMPORTANT: replace the number with wordSelect (the function) for production use
 
-//set an all lower case version of the current word
-var currentWord = currentWordFull.toLowerCase();
+//set an all upper case version of the current word
+var currentWord = currentWordFull.toUpperCase();
 
 //creates blocks in the DOM indicating where there are letters and spaces
 currentWord.split("").map(function(character) {
