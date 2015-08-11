@@ -36,13 +36,14 @@ function handlePickedLetter(letterPicked) {
       displayCongratulatoryMessageOnWin();
 
     });
+  //if letterBlock is not greater than 0 put the letter in the graveyard
   } else {
-    //if letterBlock is not greater than 0 put the letter in the graveyard
     var domElem = document.createElement("div");
     domElem.className = "grave-letter";
     domElem.innerHTML = letterPicked;
     document.getElementById("letter-graveyard").appendChild(domElem);
     hangmanGraphic.addBodyPart();
+    displayGameOverMessageOnLose();
   }
 }
 
@@ -53,6 +54,13 @@ function displayCongratulatoryMessageOnWin(){
   }
 }
 
+function displayGameOverMessageOnLose() {
+  var incorrectlyGuessedLettersCount = $("#letter-graveyard > div").length;
+  //If number of letters guessed is equal to maxParts
+  if (incorrectlyGuessedLettersCount === 7 ) {
+    $("#gameover_message").modal('show');
+  }
+}
 
 /*
  * Hangman graphic with methods addBodyPart() and reset()
@@ -60,13 +68,12 @@ function displayCongratulatoryMessageOnWin(){
 var hangmanGraphic = function () {
   var bodyParts = 0,
       maxParts = 7;
-
   return {
     addBodyPart : function () {
       if (bodyParts < maxParts) {
         ++bodyParts;
         $("#hangman-frame" + bodyParts).css("opacity", 1);
-      }
+      } 
     },
 
     reset : function () {
