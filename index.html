@@ -70,9 +70,19 @@
         <h4 class="modal-title">You lost the game!</h4>
       </div>
       <div class="modal-body">
-        <img src="img/deadDude.png" alt="Dude dead!">
-        <h5>Uh oh. You took too many tries to guess the word. Better luck next time.</h5>
-      </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <img class= "center-block" src="img/deadDude.png" alt="Dude dead!">
+            </div><!--cold-md-8-->
+          </div><!--.row-->
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <p class="lead ">Uh oh. You took too many tries to guess the word. Better luck next time.</p>
+            </div><!--./col-md-8-->
+          </div><!--/.row-->
+        </div><!--/.container-fluid-->
+      </div><!--/.modal-body-->
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
