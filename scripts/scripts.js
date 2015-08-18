@@ -83,6 +83,8 @@ var hangmanGraphic = function () {
       resetAlphabetKeypad();
       removeGraveyardLetters();
       removeCorrectlyGuessedLetters();
+      clearHtmlAroundOldWord();
+      setWordToBeGuessed();
     }
   };
 }();
@@ -108,6 +110,10 @@ function removeCorrectlyGuessedLetters(){
   $('#word-to-guess').each(function(index, element){
     $(element).children().html('');
   });
+}
+
+function clearHtmlAroundOldWord(){
+  $("#word-to-guess").html('');
 }
 
 // adding dictionary and word filter //
@@ -139,24 +145,34 @@ function wordSelect (array) {
   return word;
 }
 
-var currentWordFull = wordSelect(hangmanWords);//IMPORTANT: replace the number with wordSelect (the function) for production use
+function setWordToBeGuessed(){
 
-//set an all upper case version of the current word
-var currentWord = currentWordFull.toUpperCase();
+  currentWordFull = wordSelect(hangmanWords);//IMPORTANT: replace the number with wordSelect (the function) for production use
 
-//creates blocks in the DOM indicating where there are letters and spaces
-currentWord.split("").map(function(character) {
-  var guessWordBlock = document.getElementById("word-to-guess");
+  //set an all upper case version of the current word
+  currentWord = currentWordFull.toUpperCase();
+  //creates blocks in the DOM indicating where there are letters and spaces
 
-  var domElem = document.createElement("div");
 
-  if (character.match(/[a-z]/i)) {
-    domElem.className = "character-block is-letter";
+  currentWord.split("").map(function(character) {
+    var guessWordBlock = document.getElementById("word-to-guess");
 
-  } else {
-    domElem.className = "character-block";
+    var domElem = document.createElement("div");
 
-  }
+    if (character.match(/[a-z]/i)) {
+      domElem.className = "character-block is-letter";
 
-  guessWordBlock.appendChild(domElem);
+    } else {
+      domElem.className = "character-block";
+    }
+
+    guessWordBlock.appendChild(domElem);
+  });
+}
+
+var currentWordFull;
+var currentWord;
+
+$(document).ready(function() {
+  setWordToBeGuessed();
 });
