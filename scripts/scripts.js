@@ -73,7 +73,7 @@ var hangmanGraphic = function () {
       if (bodyParts < maxParts) {
         ++bodyParts;
         $("#hangman-frame" + bodyParts).css("opacity", 1);
-      } 
+      }
     },
 
     reset : function () {
@@ -83,7 +83,7 @@ var hangmanGraphic = function () {
       resetAlphabetKeypad();
       removeGraveyardLetters();
       removeCorrectlyGuessedLetters();
-      clearHtmlAroundOldWord();
+      removeFillInTheBlanksAroundOldWord();
       setWordToBeGuessed();
     }
   };
@@ -112,7 +112,7 @@ function removeCorrectlyGuessedLetters(){
   });
 }
 
-function clearHtmlAroundOldWord(){
+function removeFillInTheBlanksAroundOldWord(){
   $("#word-to-guess").html('');
 }
 
@@ -173,6 +173,4 @@ function setWordToBeGuessed(){
 var currentWordFull;
 var currentWord;
 
-$(document).ready(function() {
-  setWordToBeGuessed();
-});
+setWordToBeGuessed();
