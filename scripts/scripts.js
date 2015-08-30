@@ -92,7 +92,7 @@ var hangmanGraphic = function () {
 // Next 2 lines will be refactored into interface for
 //   losing a life and reseting the game
 $("#lose-life").on("click", hangmanGraphic.addBodyPart);
-$("#reset").on("click", hangmanGraphic.reset);
+$(".reset").on("click", hangmanGraphic.reset);
 
 function resetAlphabetKeypad(){
   $("#alphabet-keypad > .letter-disabled").each(function(index, element){
