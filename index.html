@@ -45,28 +45,26 @@
 </div><!-- /.modal -->
 
 
-<div class="modal fade" id="congratulatory_message" role="dialog">
+<div class="modal fade" id="congratulatory_message" role="dialog" data-backdrop="static" data-keyboard="false">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">CONGRATULATIONS!</h4>
       </div>
       <div class="modal-body">
         <h5>Congratulations, you've won the game!!</h5>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button class="btn reset" data-dismiss="modal"> Close and Reset </button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="gameover_message" role="dialog">
+<div class="modal fade" id="gameover_message" role="dialog" data-backdrop="static" data-keyboard="false">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">You lost the game!</h4>
       </div>
       <div class="modal-body">
@@ -84,7 +82,7 @@
         </div><!--/.container-fluid-->
       </div><!--/.modal-body-->
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button class="btn reset" data-dismiss="modal"> Close and Reset </button>
       </div>
     </div>
   </div>
@@ -146,7 +144,7 @@
           Lose Life
           </button>
 
-          <button id="reset" class="btn btn-success">
+          <button class="btn btn-success reset">
           Reset
           </button>
         </div>
