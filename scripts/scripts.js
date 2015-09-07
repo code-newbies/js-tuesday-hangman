@@ -61,6 +61,8 @@
     //If number of letters guessed is equal to maxParts
     if (incorrectlyGuessedLettersCount === 7 ) {
       $("#gameover_message").modal('show');
+      var gameOverMessage = "Uh oh. You took too many tries to guess the word. The correct word is - '" + currentWord + "'. Better luck next time.";
+      $(".lead").text(gameOverMessage);
     }
   }
 
@@ -93,7 +95,6 @@
 
   // Next 2 lines will be refactored into interface for
   //   losing a life and reseting the game
-  $("#lose-life").on("click", hangmanGraphic.addBodyPart);
   $(".reset").on("click", hangmanGraphic.reset);
 
   function resetAlphabetKeypad(){
