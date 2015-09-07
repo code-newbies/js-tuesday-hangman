@@ -61,8 +61,8 @@
     //If number of letters guessed is equal to maxParts
     if (incorrectlyGuessedLettersCount === 7 ) {
       $("#gameover_message").modal('show');
-      var game_over_message = "Uh oh. You took too many tries to guess the word. The correct word is - '" + currentWord + "'. Better luck next time.";
-      $(".lead").text(game_over_message);
+      var gameOverMessage = "Uh oh. You took too many tries to guess the word. The correct word is - '" + currentWord + "'. Better luck next time.";
+      $(".lead").text(gameOverMessage);
     }
   }
 
